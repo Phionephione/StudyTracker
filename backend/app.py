@@ -115,7 +115,6 @@ def get_data(user_id):
     })
 
 if __name__ == '__main__':
-    # Force the port to 10000 which is Render's favorite
-    port = int(os.environ.get("PORT", 10000))
-    print(f"DEBUG: Starting server on port {port}")
-    app.run(host='0.0.0.0', port=port)
+    # This part is only for local testing (python app.py)
+    # When on Render, Gunicorn ignores this block entirely
+    app.run(host='0.0.0.0', port=5000)
