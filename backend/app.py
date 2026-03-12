@@ -115,6 +115,7 @@ def get_data(user_id):
     })
 
 if __name__ == '__main__':
-    # Render provides a PORT environment variable
-    port = int(os.environ.get("PORT", 5000))
+    # Force the port to 10000 which is Render's favorite
+    port = int(os.environ.get("PORT", 10000))
+    print(f"DEBUG: Starting server on port {port}")
     app.run(host='0.0.0.0', port=port)
