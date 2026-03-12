@@ -3,4 +3,4 @@ flask-cors
 psycopg2-binary
 python-dotenv
 flask-bcrypt
-gunicorn
+gunicorn==20.1.0
